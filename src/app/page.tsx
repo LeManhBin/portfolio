@@ -16,7 +16,7 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(4)
+  const [limit, setLimit] = useState(2)
   const lastPageIndex = currentPage * limit;
   const firstPageIndex = lastPageIndex - limit;
   const currentItems = projectData.slice(firstPageIndex, lastPageIndex);
