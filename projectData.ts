@@ -22,8 +22,8 @@ export const projectData = [
     },
     {
         id: 4,
-        name: "Phone store",
-        backgroundImage: "/images/social-media.png",
+        name: "Btech Shop",
+        backgroundImage: "/images/btechShop.png",
         sourceCode: "https://github.com/LeManhBin/demo_do_an",
         demo: "",
     },
