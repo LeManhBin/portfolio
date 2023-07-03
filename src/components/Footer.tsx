@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaFacebookF, FaGithub, FaLinkedinIn } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/Md'
+import { MdEmail } from 'react-icons/md'
 
 const Footer = () => {
   return (
