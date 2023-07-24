@@ -50,11 +50,14 @@ const Project = ({ project }: { project: ProjectProps }) => {
                       Source Code
                   </a>
                 </button>
-                <button className='bg-white z-30 opacity-100 px-[10px] py-[5px] font-bold whitespace-nowrap rounded hover:bg-gray-200'>
-                  <a href={project.demo} target="_blank">
-                      Watch Project
-                  </a>
-                </button>
+                {
+                  project.demo &&
+                    <button className='bg-white z-30 opacity-100 px-[10px] py-[5px] font-bold whitespace-nowrap rounded hover:bg-gray-200'>
+                      <a href={project.demo} target="_blank">
+                          Watch Project
+                      </a>
+                  </button>
+                }
             </div>
             <img
               src={project.backgroundImage}
