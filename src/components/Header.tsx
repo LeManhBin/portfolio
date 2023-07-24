@@ -34,9 +34,9 @@ const Header = () => {
                 <li className='cursor-pointer' onClick={() => handleActive("#")}>
                     <a href="#" className={`${isActive === "#" && "active"} relative`}>Home</a>
                 </li>
-                <li className='cursor-pointer' onClick={() => handleActive("#experiences")}>
+                {/* <li className='cursor-pointer' onClick={() => handleActive("#experiences")}>
                     <a href="#experiences" className={`${isActive === "#experiences" && "active"} relative`}>Experiences</a>
-                </li>
+                </li> */}
                 <li className='cursor-pointer' onClick={() => handleActive("#project")}>
                     <a href="#project" className={`${isActive === "#project" && "active"} relative`}>Project</a>
                 </li>
