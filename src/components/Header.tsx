@@ -24,16 +24,16 @@ const Header = () => {
         setIsOpen(false)
     }
     
-    useEffect(() => {
-        localStorage.setItem("language", language)
-    },[language])
+    // useEffect(() => {
+    //     localStorage.setItem("language", language)
+    // },[language])
 
     let modeValue = localStorage.getItem("mode")
     console.log(modeValue);
 
-    useEffect(() => {
-        localStorage.setItem("mode", mode)
-    },[mode])
+    // useEffect(() => {
+    //     localStorage.setItem("mode", mode)
+    // },[mode])
     
   return (
     <header className='fixed top-0 left-0 right-0 z-50 bg-white h-[80px] border-b'>
