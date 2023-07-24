@@ -1,17 +1,40 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {PiDevToLogoFill} from 'react-icons/pi'
 import { GrClose } from 'react-icons/gr'
 import {HiMenuAlt3} from 'react-icons/hi'
-import { useRouter } from 'next/router'
-import { RiEarthFill } from 'react-icons/ri'
+import { MdDarkMode, MdOutlineLanguage } from 'react-icons/md'
+import {CiLight} from 'react-icons/ci'
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [isActive, setActive] = useState("#")
+    const [mode, setMode] = useState("light") //true: light --- false: dark
+    const [language, setLanguage] = useState("vie")
+    const [arrLanguage, setArrLanguage] = useState([
+        {
+            id: "eng",
+            value: "English" 
+        }, {
+            id: "vie",
+            value: "Tiếng Việt"
+        }
+    ])
     const handleActive = (id:string) => {
         setActive(id)
         setIsOpen(false)
     }
+    
+    useEffect(() => {
+        localStorage.setItem("language", language)
+    },[language])
+
+    let modeValue = localStorage.getItem("mode")
+    console.log(modeValue);
+
+    useEffect(() => {
+        localStorage.setItem("mode", mode)
+    },[mode])
+    
   return (
     <header className='fixed top-0 left-0 right-0 z-50 bg-white h-[80px] border-b'>
         <div className='flex justify-between items-center h-full max-w-[1300px] mx-auto px-[50px] max-sm:px-5 relative'>
@@ -31,9 +54,9 @@ const Header = () => {
                 <li className='cursor-pointer' onClick={() => handleActive("#")}>
                     <a href="#" className={`${isActive === "#" && "active"} relative`}>Home</a>
                 </li>
-                {/* <li className='cursor-pointer' onClick={() => handleActive("#experiences")}>
+                <li className='cursor-pointer' onClick={() => handleActive("#experiences")}>
                     <a href="#experiences" className={`${isActive === "#experiences" && "active"} relative`}>Experiences</a>
-                </li> */}
+                </li>
                 <li className='cursor-pointer' onClick={() => handleActive("#project")}>
                     <a href="#project" className={`${isActive === "#project" && "active"} relative`}>Project</a>
                 </li>
@@ -41,9 +64,24 @@ const Header = () => {
                     <a href="#contact" className={`${isActive === "#contact" && "active"} relative`}>Contact</a>
                 </li>
             </ul>
-            <div className='flex items-center gap-1 bg-gray-300 px-[10px] py-[5px] rounded-full max-md:hidden'>
-                <h1 className='font-semibold'>Hello World</h1>
-                <RiEarthFill size={20}/>
+            <div className='flex items-center gap-5'>
+                <div>
+                    {
+                        mode === "light" ? <CiLight size={20} className='cursor-pointer' onClick={() => setMode("dark")}/> : <MdDarkMode size={20} className='cursor-pointer' onClick={() => setMode("light")}/>
+                    }
+                </div>
+                <div className='flex items-center gap-1 bg-gray-300 px-[10px] py-[5px] rounded-full max-md:hidden'>
+                    <MdOutlineLanguage size={20}/>
+                    <select name="" id="" className='bg-transparent outline-none' value={language} onChange={(e) => setLanguage(e.target.value)}>
+                        {
+                            arrLanguage.map((lag) => {
+                                return(
+                                    <option key={lag.id} value={lag.id}>{lag.value}</option>
+                                )
+                            })
+                        }
+                    </select>
+                </div>
             </div>
             <HiMenuAlt3 size={30} onClick={() => setIsOpen(true)} className='cursor-pointer hidden max-md:block'/>
         </div>

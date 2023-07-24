@@ -22,7 +22,6 @@ export default function Home() {
   const currentItems = projectData.slice(firstPageIndex, lastPageIndex);
   const totalPage = projectData.length;
   const form:any = useRef();
-
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
@@ -118,12 +117,13 @@ export default function Home() {
           </div>
         </section>
          {/* experiences */}
-        {/* <section id='experiences' className='flex flex-col w-full py-[100px] gap-10 h-screen'>
+        <section id='experiences' className='flex flex-col w-full py-[100px] gap-10 h-screen'>
           <div className='flex justify-center w-full'>
             <h1 className='text-[40px] font-semibold whitespace-nowrap'>EXPERIENCES</h1>
           </div>
           
-        </section> */}
+          
+        </section>
          {/* project */}
         <section id='project' className='flex flex-col w-full py-[100px] gap-10 h-screen'>
           <div className='flex justify-center w-full'>

@@ -24,7 +24,7 @@ export const projectData = [
         demo: "https://bookstore-bookory.vercel.app/",
         frontEnd: "HTML, CSS/SCSS, ReactJs, JavaScript, Redux, Bootstrap, MUI,...",
         backEnd: "Java, Java Spring Boot, SQL Server",
-        description: "The project is an automated B2C e-commerce platform that enables customers to register for sales. It includes several key functions such as register, login, product listing, reviews, catalog management, statistics, user management, and payment.",
+        description: "The project is an automated C2C e-commerce platform that enables customers to register for sales. It includes several key functions such as register, login, product listing, reviews, catalog management, statistics, user management, and payment.",
         note: "Due to the free platform, errors may occur. In case of any errors, please refresh the page."
     },
     {
