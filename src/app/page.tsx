@@ -16,23 +16,31 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(3)
+  const [limit, setLimit] = useState(1)
   const lastPageIndex = currentPage * limit;
   const firstPageIndex = lastPageIndex - limit;
   const currentItems = projectData.slice(firstPageIndex, lastPageIndex);
   const totalPage = projectData.length;
   const form:any = useRef();
+
+
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
+      let newLimit;
 
-      if (screenWidth < 1300 && screenWidth > 851) {
-        setLimit(2);
-      } else if (screenWidth < 850) {
-        setLimit(1);
+      if (screenWidth > 1300) {
+        newLimit = 3;
+      } else if (screenWidth > 851) {
+        newLimit = 2;
+      } else {
+        newLimit = 1;
       }
+
+      setLimit(newLimit);
     };
 
+    handleResize(); // Khởi tạo giá trị ban đầu
     window.addEventListener('resize', handleResize);
 
     return () => {
