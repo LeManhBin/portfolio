@@ -1,19 +1,5 @@
 export const projectData = [
     {
-        id: 1,
-        name: "Social media",
-        type: "Personal project ",
-        teamSize: 1,
-        position: "Full-Stack",
-        backgroundImage: "/images/social-media.png",
-        sourceCode: "https://github.com/LeManhBin/FrontEnd-social-media",
-        demo: "https://front-end-social-media.vercel.app/",
-        frontEnd: "HTML, CSS, ReactJs, Vite, JavaScript, Redux, Tailwind CSS",
-        backEnd: "NodeJs, Express, Mongodb",
-        description: "The project includes basic functions such as registration, JWT-based login, post management, profile management, friend requests, unfriending, and post liking.",
-        note: "Due to the free platform, errors may occur. In case of any errors, please refresh the page."
-    },
-    {
         id: 2,
         name: "Bookory",
         type: "Graduation thesis",
@@ -42,6 +28,34 @@ export const projectData = [
         note: "Due to the free platform, errors may occur. In case of any errors, please refresh the page."
     },
     {
+        id: 7,
+        name: "Shoes Store VueJs",
+        type: "Personal project ",
+        teamSize: 1,
+        position: "Front End",
+        backgroundImage: "/images/vue-shop.png",
+        sourceCode: "https://github.com/LeManhBin/shoes-store-vuejs",
+        demo: "https://shoes-store-vuejs.vercel.app/",
+        frontEnd: "HTML, CSS/SCSS, VueJs, JavaScript, Pinia, Tailwind CSS",
+        backEnd: "Json Server Auth",
+        description: "The project includes main features such as registration, login, add to cart, ordering, product management, order management, ...",
+        note: "Due to the free platform, errors may occur. In case of any errors, please refresh the page."
+    },
+    {
+        id: 1,
+        name: "Social media",
+        type: "Personal project ",
+        teamSize: 1,
+        position: "Full-Stack",
+        backgroundImage: "/images/social-media.png",
+        sourceCode: "https://github.com/LeManhBin/FrontEnd-social-media",
+        demo: "https://front-end-social-media.vercel.app/",
+        frontEnd: "HTML, CSS, ReactJs, Vite, JavaScript, Redux, Tailwind CSS",
+        backEnd: "NodeJs, Express, Mongodb",
+        description: "The project includes basic functions such as registration, JWT-based login, post management, profile management, friend requests, unfriending, and post liking.",
+        note: "Due to the free platform, errors may occur. In case of any errors, please refresh the page."
+    },
+    {
         id: 4,
         name: "Btech Shop",
         type: "Major assignment",
@@ -66,7 +80,7 @@ export const projectData = [
         demo: "https://lemanhbin.github.io/CaRa-Shop/",
         frontEnd: "HTML, CSS, JavaScript",
         backEnd: "",
-        description: "",
+        description: "learn basic HTML/CSS",
         note: ""
     },
     {
@@ -80,7 +94,7 @@ export const projectData = [
         demo: "https://lemanhbin.github.io/starbucks-clone/",
         frontEnd: "HTML, CSS, JavaScript",
         backEnd: "",
-        description: "",
+        description: "learn basic HTML/CSS",
         note: ""
     },
 ]

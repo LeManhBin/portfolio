@@ -12,7 +12,7 @@ const Pagination = ({totalPage, limit, setCurrentPage, currentPage, background}:
         {
         pages.map((page, index) => {
             return(
-            <button key={index} className={`w-[30px] border h-[30px] font-semibold rounded-sm ${page === currentPage ? "bg-blue-300" : ""}`} onClick={() => setCurrentPage(page)}>{page}</button>
+            <button key={index} className={`w-[30px] border h-[30px] font-semibold rounded-sm ${page === currentPage ? "bg-[#333] text-white" : ""}`} onClick={() => setCurrentPage(page)}>{page}</button>
             )
         })
         }

@@ -1,8 +1,8 @@
 "use client"
 import {useEffect, useState, useRef} from "react"
-import {FaFacebookF, FaGithub, FaLinkedinIn, FaLongArrowAltRight, FaNodeJs} from 'react-icons/fa'
+import {FaFacebookF, FaGithub, FaLinkedinIn, FaLongArrowAltRight, FaNodeJs, FaVuejs, } from 'react-icons/fa'
 import {RiBootstrapFill, RiCss3Fill, RiHtml5Line, RiJavascriptFill, RiReactjsLine} from 'react-icons/ri'
-import {BiLogoSass, BiLogoTypescript} from 'react-icons/bi'
+import {BiLogoSass, BiLogoTypescript, } from 'react-icons/bi'
 import {SiTailwindcss} from 'react-icons/si'
 import {TbBrandRedux} from 'react-icons/tb'
 import {BsSend} from 'react-icons/bs'
@@ -16,7 +16,7 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(2)
+  const [limit, setLimit] = useState(3)
   const lastPageIndex = currentPage * limit;
   const firstPageIndex = lastPageIndex - limit;
   const currentItems = projectData.slice(firstPageIndex, lastPageIndex);
@@ -27,9 +27,9 @@ export default function Home() {
       const screenWidth = window.innerWidth;
 
       if (screenWidth < 1300 && screenWidth > 851) {
-        setLimit(4);
-      } else if (screenWidth < 850) {
         setLimit(2);
+      } else if (screenWidth < 850) {
+        setLimit(1);
       }
     };
 
@@ -97,6 +97,7 @@ export default function Home() {
             </div>
             <div className='mt-5 max-sm:mt-[10px] flex gap-5 max-lg:flex-wrap max-lg:justify-center'>
                 <RiReactjsLine size={40} className='text-[#61DBFB]  rotate-css'/>
+                <FaVuejs size={40} className='text-[#41B883]'/>
                 <RiHtml5Line size={40} className='text-[#F06529]'/>
                 <RiCss3Fill size={40} className='text-[#3C99DC]'/>
                 <BiLogoSass size={40} className='text-[#CD6799]'/>
@@ -129,18 +130,7 @@ export default function Home() {
           <div className='flex justify-center w-full'>
             <h1 className='text-[40px] font-semibold whitespace-nowrap'>MY PROJECT</h1>
           </div>
-          <div className='flex flex-col items-center max-[1300px]:hidden'>
-            <div className='flex justify-center gap-5 flex-wrap'>
-                {
-                  projectData.map((project:any) => {
-                    return(
-                      <Project key={project.id} project={project}/>
-                    )
-                  })
-                }
-            </div>
-          </div>
-          <div className='flex flex-col items-center min-[1300px]:hidden'>
+          <div className='flex flex-col items-center'>
             <div className='flex justify-center gap-5 flex-wrap'>
                 {
                   currentItems.map((project:any) => {
