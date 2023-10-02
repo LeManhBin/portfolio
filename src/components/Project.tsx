@@ -84,11 +84,14 @@ const Project = ({ project }: { project: ProjectProps }) => {
                 GitHub <AiFillGithub size={14}/>
               </a>
             </button>
-            <button className='px-3 py-2 text-sm text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-semibold'>
-              <a href={project?.demo} target="_blank" className='flex items-center gap-1'>
-                Website <TbWorldCode size={14}/>
-              </a>
-            </button>
+            {
+              project?.demo &&
+              <button className='px-3 py-2 text-sm text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-semibold'>
+                <a href={project?.demo} target="_blank" className='flex items-center gap-1'>
+                  Website <TbWorldCode size={14}/>
+                </a>
+              </button>
+            }
           </div>
         </div>
       </div>

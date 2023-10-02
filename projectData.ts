@@ -14,6 +14,20 @@ export const projectData = [
         note: "Due to the free platform, errors may occur. In case of any errors, please refresh the page."
     },
     {
+        id: 8,
+        name: "Juong Job.",
+        type: "Graduation thesis",
+        teamSize: 2,
+        position: "Front End",
+        backgroundImage: "/images/juongjob.png",
+        sourceCode: "https://github.com/LeManhBin/Juong-job",
+        demo: "https://juong-job.vercel.app/",
+        frontEnd: "HTML, CSS/SCSS, VueJs, JavaScript, Pinia, Tailwind CSS, Ant design",
+        backEnd: "PHP, Laravel, MySQL, Filament",
+        description: "The project is a website that provides support for job searching and posting job listings for both job seekers and employers. The website includes key features such as login, registration, CV management and creation, job application submissions, job recommendations, profile editing, job posting, candidate information viewing, and management and moderation.",
+        note: "Due to the free platform, errors may occur. In case of any errors, please refresh the page."
+    },
+    {
         id: 3,
         name: "Booking Hotel",
         type: "Personal project ",
